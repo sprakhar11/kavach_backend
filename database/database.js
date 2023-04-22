@@ -1,14 +1,16 @@
+const express=require("express");
 const mongoose=require("mongoose");
+const dotenv=require("dotenv");
+dotenv.config();
+const connectdb=(DATABASE_URL)=>{
+  
+    return mongoose.connect(DATABASE_URL).then((success)=>{
+        console.log("database connected success");
 
-require("dotenv").config();
-
-const connectDb=(DATABASE_URL)=>{
-    return mongoose.connect(DATABASE_URL, { useNewUrlParser: true }).then((success)=>{
-        console.log("Database connected Successfully");
     }).catch((error)=>{
-        console.log("Database not connected");
+        console.log(DATABASE_URL);
+        console.log("database not connected");
         console.log(error);
     })
 }
-
-module.exports=connectDb;
+module.exports=connectdb;
