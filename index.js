@@ -6,7 +6,7 @@ const dotenv=require("dotenv");
 dotenv.config();
 const mongoose=require("mongoose");
 mongoose.set("strictQuery", false);
-const DATABASE_URL=process.env.DATABASE_URL;
+const DATABASE_URL= process.env.DATABASE_URL;
 console.log("hit 1 check");
 console.log(DATABASE_URL)
 const connectdb=require("./database/database.js");
