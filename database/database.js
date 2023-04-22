@@ -1,5 +1,6 @@
 const express=require("express");
 const mongoose=require("mongoose");
+mongoose.set("strictQuery", false);
 const dotenv=require("dotenv");
 dotenv.config();
 const connectdb=(DATABASE_URL)=>{
