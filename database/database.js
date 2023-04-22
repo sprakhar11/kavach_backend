@@ -1,6 +1,6 @@
 const mongoose=require("mongoose");
 
-require("dotenv").config();
+require("dotenv").config({ path: 'ENV_FILENAME' });
 
 const connectDb=(DATABASE_URL)=>{
     return mongoose.connect(DATABASE_URL).then((success)=>{
