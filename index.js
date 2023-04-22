@@ -1,11 +1,11 @@
 const express=require("express");
 const path=require("path");
 const app=express();
-mongoose.set("strictQuery", false);
 const port=process.env.PORT||8000;
 const dotenv=require("dotenv");
 dotenv.config();
 const mongoose=require("mongoose");
+mongoose.set("strictQuery", false);
 const DATABASE_URL=process.env.DATABASE_URL;
 console.log("hit 1 check");
 console.log(DATABASE_URL)
