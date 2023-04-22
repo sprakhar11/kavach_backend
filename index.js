@@ -2,7 +2,7 @@ const express=require("express");
 const path=require("path");
 const app=express();
 const port=process.env.PORT||8000;
-require("dotenv").config();
+const dotenv=require("dotenv");
 dotenv.config();
 const mongoose=require("mongoose");
 const connectDb=require("./database/database.js");
