@@ -3,6 +3,7 @@ const path=require("path");
 const app=express();
 const port=process.env.PORT||8000;
 require("dotenv").config();
+dotenv.config();
 const mongoose=require("mongoose");
 const connectDb=require("./database/database.js");
 const DATABASE_URL=process.env.DATABASE_URL;
